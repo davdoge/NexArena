@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexArena</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="background-grid"></div>
+<div class="modal" id="tournamentModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <h2>Create Tournament</h2>
+        <p>Set up your esports event in seconds.</p>
+
+        <input type="text" id="tournamentName" placeholder="Tournament name">
+
+        <select id="gameName">
+            <option>Brawl Stars</option>
+            <option>Valorant</option>
+            <option>Rocket League</option>
+            <option>Fortnite</option>
+        </select>
+
+        <input type="number" id="prizePool" placeholder="Prize pool">
+
+        <button onclick="createTournament()">Create</button>
+
+        <div class="result" id="result"></div>
+    </div>
+</div>
+</body>
+</html>
+<nav class="navbar">
+
+    <div class="logo">
+        NexArena
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Tournaments</a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">Crowdfunding</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+<button class="theme-btn" onclick="changeTheme()">Change Theme</button>
+<button class="nav-btn" onclick="openModal()">
+    Create Tournament
+</button>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>
+            THE FUTURE OF
+            <span>ESPORTS</span>
+            STARTS HERE.
+        </h1>
+
+        <p>
+            Create tournaments, grow prize pools and build your competitive community.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="primary-btn">
+                Explore Tournaments
+            </button>
+
+            <button class="secondary-btn">
+                Start Now
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="stats">
+
+    <div class="stat-card">
+        <h2>120+</h2>
+        <p>Tournaments Organized</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>15K+</h2>
+        <p>Players Registered</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>$50K+</h2>
+        <p>Prize Pool Distributed</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>25+</h2>
+        <p>Countries Worldwide</p>
+    </div>
+
+</section>
+<section class="tournaments">
+
+    <div class="section-title">
+        <h2>Featured Tournaments</h2>
+    </div>
+
+    <div class="tournament-grid" id="tournamentGrid">
+
+        <div class="tournament-card">
+
+            <img src="https://d3dwep9z8m8y9r.cloudfront.net/publications/2023/02/publications-10140/thumbnail/35420/Site_1738x800.png">
+
+            <div class="card-content">
+
+                <h3>Brawl Stars Championship</h3>
+
+                <p>3,240 Players • $5,000 Prize Pool</p>
+
+                <button>Join Now</button>
+
+            </div>
+
+        </div>
+
+        <div class="tournament-card">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrSxEJnpj_P_ij0NW02iyjfMSx9COD9_9gEA&s">
+
+            <div class="card-content">
+
+                <h3>Valorant Community Cup</h3>
+
+                <p>1,890 Players • $3,000 Prize Pool</p>
+
+                <button>Join Now</button>
+
+            </div>
+
+        </div>
+
+        <div class="tournament-card">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrFsM4F-NEaaFE7B5XsgyRNrfuwGFiBJktFg&s">
+
+            <div class="card-content">
+
+                <h3>Rocket League Showdown</h3>
+
+                <p>2,150 Players • $4,500 Prize Pool</p>
+
+                <button>Join Now</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="crowdfunding">
+    <div class="crowd-text">
+        <h2>Boost the Prize Pool</h2>
+        <p>
+            Fans, sponsors and communities can support tournaments,
+            helping players compete for bigger rewards.
+        </p>
+
+        <div class="progress-box">
+            <div class="progress-info">
+                <span>$8,750 raised</span>
+                <span>$10,000 goal</span>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <button class="primary-btn">Support Tournament</button>
+    </div>
+</section>
+<section class="how">
+    <div class="section-title">
+        <h2>How It Works</h2>
+        <p>Create, share and compete in just a few steps.</p>
+    </div>
+
+    <div class="how-grid">
+        <div class="how-card">
+            <span>01</span>
+            <h3>Create Tournament</h3>
+            <p>Set up your event, rules, game mode and prize pool.</p>
+        </div>
+
+        <div class="how-card">
+            <span>02</span>
+            <h3>Invite Players</h3>
+            <p>Share your tournament with teams and communities.</p>
+        </div>
+
+        <div class="how-card">
+            <span>03</span>
+            <h3>Boost Prize Pool</h3>
+            <p>Let fans and sponsors support the competition.</p>
+        </div>
+
+        <div class="how-card">
+            <span>04</span>
+            <h3>Compete & Win</h3>
+            <p>Play, climb the brackets and celebrate the winners.</p>
+        </div>
+    </div>
+</section>
+<section class="community">
+    <div class="section-title">
+        <h2>Trusted by the Community</h2>
+        <p>Players, teams and creators growing together.</p>
+    </div>
+
+    <div class="community-grid">
+        <div class="community-card">
+            <p>"NexArena made our tournaments look professional and easy to manage."</p>
+            <h4>Lucas • Team Captain</h4>
+        </div>
+
+        <div class="community-card">
+            <p>"The prize pool system makes the community feel part of the event."</p>
+            <h4>Maya • Streamer</h4>
+        </div>
+
+        <div class="community-card">
+            <p>"Perfect for small esports organizations that want to grow."</p>
+            <h4>Rafael • Organizer</h4>
+        </div>
+    </div>
+</section>
+
+
+    <div>
+        <h3>Platform</h3>
+        <a href="#">Tournaments</a>
+        <a href="#">Crowdfunding</a>
+        <a href="#">Create Tournament</a>
+    </div>
+
+    <div>
+        <h3>Community</h3>
+        <a href="#">Players</a>
+        <a href="#">Teams</a>
+        <a href="#">Leaderboard</a>
+    </div>
+
+    <div>
+        <h3>Contact</h3>
+        <a href="#">Instagram</a>
+        <a href="#">Discord</a>
+        <a href="#">Email</a>
+    </div>
+</footer>
